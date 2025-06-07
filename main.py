@@ -1,9 +1,8 @@
+from stats import get_number_of_words
+
 def get_book_text(book):
     with open(book, "r", encoding="utf-8") as f:
         return f.read()
-
-def get_number_of_words(text):
-    return len(text.split()) 
 
 def main():
     text = get_book_text("books/frankenstein.txt")
@@ -11,4 +10,5 @@ def main():
     print(f"{text}")
     print(f"{word_count} words found in the document")
 
-main()
+if __name__ == "__main__":
+    main()
