@@ -10,3 +10,8 @@ def get_number_of_characters(text):
         else:
             char_dict[lowered] = 1
     return char_dict
+
+def get_sorted_characters(dict_char):
+    sorted_list = [{"char": num, "num": count} for num, count in dict_char.items()]
+    sorted_list.sort(key=lambda item: item["num"], reverse=True)
+    return sorted_list
